@@ -43,6 +43,16 @@
             }
         }
     </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
 <body class="bg-brand-bg text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
@@ -54,17 +64,17 @@
 
     <!-- Navegação Minimalista de Luxo -->
     <header class="border-b border-stone-200/80 bg-brand-bg/90 backdrop-blur sticky top-0 z-50 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-4 group">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center gap-3">
+            <a href="#" class="flex items-center gap-3 md:gap-4 group min-w-0">
                 <!-- Logo Aumentado e Nítido -->
                 <div
-                    class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border border-stone-300 shadow-sm bg-white p-0.5 group-hover:border-brand-accent transition-all flex-shrink-0">
+                    class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border border-stone-300 shadow-sm bg-white p-0.5 group-hover:border-brand-accent transition-all flex-shrink-0">
                     <img src="./image/alvorecer%20logo.jpg" alt="Logo Alvorecer Produtos Artesanais"
                         class="w-full h-full object-cover rounded-full">
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col min-w-0">
                     <span
-                        class="text-xl md:text-2xl font-serif tracking-[0.2em] uppercase font-semibold">Alvorecer</span>
+                        class="text-lg sm:text-xl md:text-2xl font-serif tracking-[0.2em] uppercase font-semibold">Alvorecer</span>
                     <span
                         class="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-stone-500 font-light">Produtos
                         Artesanais</span>
@@ -81,25 +91,37 @@
             </nav>
 
             <a href="https://instagram.com/alvorecer.shop" target="_blank"
-                class="text-xs uppercase tracking-wider text-brand-dark hover:text-brand-accent transition-colors border border-stone-300 px-4 py-2 hover:border-brand-dark">
+                class="shrink-0 text-[10px] sm:text-xs uppercase tracking-wider text-brand-dark hover:text-brand-accent transition-colors border border-stone-300 px-3 sm:px-4 py-2 hover:border-brand-dark">
                 Instagram
             </a>
         </div>
+        <!-- Navegação Mobile com Rolagem Horizontal -->
+        <nav
+            class="lg:hidden flex overflow-x-auto no-scrollbar gap-3 px-4 pb-2 text-[11px] uppercase tracking-wider text-stone-600 whitespace-nowrap">
+            <a href="#mandalas-pontilhismo"
+                class="shrink-0 px-3 py-1.5 rounded-full border border-stone-300 bg-white">Pontilhismo</a>
+            <a href="#mandalas-tecidas"
+                class="shrink-0 px-3 py-1.5 rounded-full border border-stone-300 bg-white">Mandalas de Lã</a>
+            <a href="#sabonetes-botanicos"
+                class="shrink-0 px-3 py-1.5 rounded-full border border-stone-300 bg-white">Sabonetes</a>
+            <a href="#amuletos-cristais"
+                class="shrink-0 px-3 py-1.5 rounded-full border border-stone-300 bg-white">Pulseiras</a>
+        </nav>
     </header>
 
     <!-- Hero Section Principal com Logo em Grande Destaque -->
-    <section class="max-w-5xl mx-auto px-4 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
+    <section class="max-w-5xl mx-auto px-4 pt-6 pb-10 md:pt-12 md:pb-14 text-center">
         <!-- Emblema Sagrado em Tamanho Generoso e Legível -->
-        <div class="mb-10 flex justify-center">
+        <div class="mb-6 md:mb-8 flex justify-center">
             <div class="relative group">
                 <div
-                    class="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-stone-300 shadow-md bg-white p-1 hover:border-brand-accent hover:shadow-xl transition-all duration-500">
+                    class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-stone-300 shadow-md bg-white p-1 hover:border-brand-accent hover:shadow-xl transition-all duration-500">
                     <img src="./image/alvorecer%20logo.jpg" alt="Alvorecer - Geometria Sagrada e Produtos Artesanais"
                         class="w-full h-full object-cover rounded-full">
                 </div>
                 <div
                     class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-[9px] uppercase tracking-[0.25em] px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
-                    Arte Esotérica
+                    Arte Feita à Mão
                 </div>
             </div>
         </div>
@@ -157,7 +179,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- 1. Mandala Solar em Pontilhismo -->
                 <article
@@ -166,14 +188,14 @@
                         <img src="./image/01a84e58-38f4-48f6-b286-8c997869ca39.JPG" alt="Mandala Solar em Pontilhismo"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Geometria
-                        Solar</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Tons
+                        Amarelos</span>
                     <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Solar em Pontilhismo</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Canalização da energia solar, vitalidade e clareza mental para ambientes sagrados.
+                        Pintada à mão em tons de amarelo e dourado. Traz luz, alegria e calor para qualquer cantinho.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 47,00</span>
                     </div>
                     <button type="button" data-product="Mandala Solar em Pontilhismo" data-price="R$ 47,00"
@@ -187,20 +209,21 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/56b61b90-c53d-4674-a739-b1f0a06cce98.JPG" alt="Mandala Celestial Olho Sagrado"
+                        <img src="./image/56b61b90-c53d-4674-a739-b1f0a06cce98.JPG" alt="Mandala Harmonia Azul"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Proteção
-                        Áurica</span>
-                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Celestial Olho Sagrado</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Tons
+                        Azuis</span>
+                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Harmonia Azul</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Blindagem vibracional, serenidade e conexão com os mistérios cósmicos sob a luz do Olho Sagrado.
+                        Detalhes em azul profundo, celeste e branco. Uma peça serena que transmite calma e paz para o
+                        ambiente.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 47,00</span>
                     </div>
-                    <button type="button" data-product="Mandala Celestial Olho Sagrado" data-price="R$ 47,00"
+                    <button type="button" data-product="Mandala Harmonia Azul" data-price="R$ 47,00"
                         data-image="./image/56b61b90-c53d-4674-a739-b1f0a06cce98.JPG"
                         class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
                         Solicitar Encomenda
@@ -211,21 +234,21 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/tt.HEIC" alt="Mandala Girassol & Ouro Solar"
+                        <img src="./image/tt.HEIC" alt="Mandala Girassol"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Abundância &
-                        Foco</span>
-                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Girassol & Ouro Solar</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Tons
+                        Azuis</span>
+                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Flor de Lótus</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Pontilhismo radiante de tons dourados e âmbar para atração de prosperidade e expansão de
-                        consciência.
+                        Detalhes em azul profundo. Uma peça serena que transmite calma e paz para o
+                        ambiente.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 47,00</span>
                     </div>
-                    <button type="button" data-product="Mandala Girassol & Ouro Solar" data-price="R$ 47,00"
+                    <button type="button" data-product="Mandala Girassol" data-price="R$ 47,00"
                         data-image="./image/c1a895fb-cf4c-4272-b683-41da185eba23.JPG"
                         class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
                         Solicitar Encomenda
@@ -236,20 +259,20 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_2676.JPG" alt="Mandala Floral Cósmica Magenta"
+                        <img src="./image/IMG_2676.JPG" alt="Mandala Floral"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Chakra
-                        Cardíaco</span>
-                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Floral Cósmica</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Tons Rosa &
+                        Roxo</span>
+                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Floral</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Harmonização do centro amoroso, magnetismo afetivo e florescimento espiritual da alma.
+                        Combinação suave e delicada de cores para trazer vida e aconchego para quartos e salas.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 47,00</span>
                     </div>
-                    <button type="button" data-product="Mandala Floral Cósmica" data-price="R$ 47,00"
+                    <button type="button" data-product="Mandala Floral" data-price="R$ 47,00"
                         data-image="./image/IMG_2676.JPG"
                         class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
                         Solicitar Encomenda
@@ -260,20 +283,20 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_2670.JPG" alt="Mandalas Flor de Lótus Sagrada"
+                        <img src="./image/IMG_2670.JPG" alt="Mandala Flor de Lótus"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
                     <span
                         class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Renascimento</span>
-                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Flor de Lótus Sagrada</h3>
+                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Flor de Lótus</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Composição em esmeralda e safira com bordas douradas, simbolizando pureza e elevação espiritual.
+                        Ponto a ponto em tons de esmeralda com acabamento dourado. Uma peça elegante e marcante.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 47,00</span>
                     </div>
-                    <button type="button" data-product="Mandala Flor de Lótus Sagrada" data-price="R$ 47,00"
+                    <button type="button" data-product="Mandala Flor de Lótus" data-price="R$ 47,00"
                         data-image="./image/IMG_2670.JPG"
                         class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
                         Solicitar Encomenda
@@ -284,21 +307,20 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_2668.JPG" alt="Trio Alquímico dos Elementos"
+                        <img src="./image/IMG_2668.JPG" alt="Mandala Violeta & Dourada"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Coleção
-                        Completa</span>
-                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Alquímica dos Elementos</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Tons
+                        Violeta</span>
+                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Mandala Violeta & Dourada</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Tríptico harmônico em violeta, verde e azul com pontos de ouro para transformação integral do
-                        espaço.
+                        Arte rica em contrastes e detalhes finos, ideal para compor uma parede de destaque.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 47,00</span>
                     </div>
-                    <button type="button" data-product="Mandala Alquímica dos Elementos" data-price="R$ 47,00"
+                    <button type="button" data-product="Mandala Violeta & Dourada" data-price="R$ 47,00"
                         data-image="./image/IMG_2668.JPG"
                         class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
                         Solicitar Encomenda
@@ -337,8 +359,8 @@
                 class="border-t border-stone-300 pt-12 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
                     <span class="text-xs uppercase tracking-[0.3em] text-brand-accent font-medium">Coleção II &bull;
-                        Tradição Huichol</span>
-                    <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mt-1">Mandalas de Lã 30cm & Olhos de Deus
+                        Arte Têxtil</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mt-1">Mandalas de Lã - 30cm
                     </h2>
                     <p class="text-stone-500 text-sm font-light mt-2 max-w-xl">
                         Trama artesanal tecida com fios de lã coloridos sobre estrutura de madeira. Traz textura, calor
@@ -350,7 +372,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- 1. Mandala Tecida Violeta Cósmica -->
                 <article
@@ -361,9 +383,10 @@
                     </div>
                     <span
                         class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Transmutação</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Violeta Cósmica (30cm)</h3>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Violeta (30cm)</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Tramas em tons de ametista e sol canalizando a chama violeta de purificação energética.
+                        Trama artesanal tecida com fios em tons de roxo e amarelo. Traz cor e textura aconchegante para
+                        a parede.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -383,11 +406,11 @@
                         <img src="./image/568aa5c9-c6f7-4ee8-9b46-e0c4f28a4a8c.jpg" alt="Mandala Tecida Estrela Rubra"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Força &
-                        Raiz</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Estrela Rubra (30cm)</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Tons
+                        Vermelhos</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Vermelha (30cm)</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Geometria octogonal em fios vermelhos e brancos para aterramento e determinação.
+                        Trama geométrica tecida em fios vermelhos e claros, com visual rústico e marcante.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -407,11 +430,11 @@
                         <img src="./image/e52ea72a-508d-4a96-aac6-9ebccafb9371.jpg" alt="Mandala Tecida Girassol Solar"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Vitalidade
-                        Pura</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Girassol Solar (30cm)</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Amarelo &
+                        Verde</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Girassol (30cm)</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Forma orgânica de girassol com pétalas douradas e bordas em verde folha.
+                        Trama vibrante inspirada nas cores da natureza, perfeita para varandas ou salas bem iluminadas.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -431,11 +454,11 @@
                         <img src="./image/984c6c86-a24f-41fc-ad31-ef806bb28928.jpg" alt="Mandala Tecida Estrela Azul"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Paz
-                        Cósmica</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Estrela Celestial (30cm)</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Degradê
+                        Azul</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Degradê Azul (30cm)</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Múltiplas camadas em degradê índigo e celeste promovendo serenidade profunda.
+                        Fios em tons de azul escuro e claro tecidos em camadas, trazendo serenidade para o ambiente.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -455,11 +478,11 @@
                         <img src="./image/b75d94a4-1066-4e23-8556-6b9bdb9f0261.jpg" alt="Mandala Tecida Sete Chakras"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Alinhamento
-                        Integral</span>
+                    <span
+                        class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Multicolorida</span>
                     <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Sete Chakras (30cm)</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Espectro cromático completo dos centros de energia em um tecido sagrado e harmônico.
+                        Combinação alegre de todas as cores em uma trama harmoniosa e cheia de vida.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -479,11 +502,11 @@
                         <img src="./image/d87ba938-a976-4ea8-9acb-955d537e085a.jpg" alt="Mandala Tecida Flor de Ouro"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Magnetismo
-                        Solar</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Tons
+                        Terrosos</span>
                     <h3 class="font-serif text-xl mb-2 text-stone-900">Mandala de Lã Flor de Ouro (30cm)</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Estrela tecida em camadas de amarelo luminoso e âmbar para atração de bons fluídos.
+                        Trama delicada em amarelo e bege, combinando com decorações neutras e rústicas.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -499,16 +522,16 @@
                 <!-- 7. Mensageiro Infinito Safira & Ouro -->
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
-                    <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
+                    <div class="aspect-square w-full overflow-hidden bg-[#fbfaf8] flex items-center justify-center">
                         <img src="./image/37c87fbe-e74a-44c8-ac92-07ac44480e90.jpg"
-                            alt="Amuleto Mensageiro dos Ventos Safira"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                            class="w-full h-full object-contain p-3" alt="Amuleto Mensageiro dos Ventos Safira">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Elemento
-                        Ar</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mensageiro Infinito Safira (30cm)</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Amuleto com
+                        Franjas</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Amuleto de Parede Azul com Franjas</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Geometria do infinito tecida com contas cristalinas e franjas para fluidez e leveza no lar.
+                        Mandala tecida com acabamento em franjas e detalhes delicados para pendurar em portas ou
+                        janelas.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -524,16 +547,16 @@
                 <!-- 8. Mensageiro Infinito Rubi & Esmeralda -->
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
-                    <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
+                    <div class="aspect-square w-full overflow-hidden bg-[#fbfaf8] flex items-center justify-center">
                         <img src="./image/83df1084-7a95-46a0-baea-717a7ded726c.jpg"
-                            alt="Amuleto Mensageiro dos Ventos Rubi"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                            class="w-full h-full object-contain p-3" alt="Amuleto Mensageiro dos Ventos Rubi">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Proteção de
-                        Entradas</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Mensageiro Infinito Rubi (30cm)</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Amuleto com
+                        Franjas</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Amuleto de Parede Rubi com Franjas</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Pêndulo de proteção com contas de pérola e franjas alvas, ideal para portas e janelas.
+                        Mandala tecida com acabamento em franjas e detalhes delicados para pendurar em portas ou
+                        janelas.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -561,7 +584,7 @@
                     <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mt-1">Sabonetes Botânicos & Rituais de
                         Banho</h2>
                     <p class="text-stone-500 text-sm font-light mt-2 max-w-xl">
-                        Feitos à base de glicerina vegetal, com espuma macia e aroma suave. Deixam a pele hidratada e o
+                        Feitos à base de glicerina, com espuma macia e aroma suave. Deixam a pele hidratada e o
                         momento do banho mais relaxante. Ótimos também para montar kits de presente.
                     </p>
                 </div>
@@ -570,7 +593,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- 1. Sabonete Botânico de Lavanda com Relevo -->
                 <article
@@ -579,11 +602,11 @@
                         <img src="./image/IMG_7759.JPG" alt="Sabonete Botânico de Lavanda"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Aromaterapia
-                        Relaxante</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Aroma de
+                        Lavanda</span>
                     <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Relevo de Lavanda</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Barra esculpida com flores de lavanda para acalmar a mente e purificar o corpo físico.
+                        Glicerina hidratante com aroma suave de lavanda. Espuma cremosa para um banho relaxante.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -600,14 +623,15 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_7795.JPG" alt="Sabonete Sal Rosa do Himalaia"
+                        <img src="./image/IMG_7796.JPG" alt="Sabonete Sal Rosa do Himalaia"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Descarga &
-                        Renovação</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Sal Rosa & Quartzo Mineral</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Com Sal
+                        Rosa</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Sal Rosa</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Cristais de sal do Himalaia em suspensão para descarrego de energias pesadas e esfoliação suave.
+                        Base de glicerina com cristais de sal rosa. Espuma leve e esfoliação delicada para a
+                        pele.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -624,14 +648,15 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_7768.JPG" alt="Sabonete Flor de Lótus Sagrada"
+                        <img src="./image/IMG_7767.JPG" alt="Sabonete Flor de Lótus Sagrada"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Purificação
-                        Pura</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Lótus Sagrada Alquímica</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Formato
+                        Lótus</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Flor de Lótus</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Formato esculpido em pétalas estelares para renascimento e bênçãos diárias na água corrente.
+                        Esculpido em formato de flor de lótus, com espuma macia e perfume delicado. Lindo para
+                        presentear.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -648,14 +673,14 @@
                 <article
                     class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
                     <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_7773.jpg" alt="Sabonete Rosa Mística & Camélia"
+                        <img src="./image/IMG_7772.jpg" alt="Sabonete Rosa Mística & Camélia"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Amor &
-                        Doçura</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Rosa Mística & Camélia</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Aroma
+                        Floral</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Rosa Camélia</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Pétalas em camadas com perfume botânico sutil para despertar o afeto e autoamor.
+                        Pétalas em relevo e fragrância floral suave. Hidrata a pele e deixa o banho mais especial.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -675,11 +700,11 @@
                         <img src="./image/IMG_7775.JPG" alt="Sabonete Margarida dos Campos"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Alegria &
-                        Luz</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Formato
+                        Margarida</span>
                     <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Margarida dos Campos</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Design circular com centro texturizado promovendo massagem sensorial e ânimo matinal.
+                        Sabonete em formato de margarida, com glicerina e espuma suave para o dia a dia.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -699,11 +724,11 @@
                         <img src="./image/IMG_7777.JPG" alt="Sabonete Mandala de 8 Pétalas"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Harmonia
-                        Elemental</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Mandala de 8 Pétalas</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Formato
+                        Mandala</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Mandala</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Padrão geométrico sagrado moldado na glicerina para equilíbrio dos polos energéticos.
+                        Desenho de mandala em relevo na glicerina. Aroma leve, ótimo para kits de presente.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -723,11 +748,11 @@
                         <img src="./image/IMG_7790.jpg" alt="Sabonete Frangipani Jasmim Manga"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Feminino
-                        Sagrado</span>
-                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Jasmim Manga Frangipani</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Aroma
+                        Tropical</span>
+                    <h3 class="font-serif text-xl mb-2 text-stone-900">Sabonete Jasmim</h3>
                     <p class="text-stone-500 text-xs font-light mb-5 flex-grow leading-relaxed">
-                        Forma tropical graciosa de cinco pétalas com toque sedoso e aroma floral envolvente.
+                        Formato de flor tropical com toque sedoso e aroma envolvente. Espuma cremosa e hidratante.
                     </p>
                     <div class="flex justify-between items-center mb-4 pt-3 border-t border-stone-100">
                         <span class="text-[10px] uppercase tracking-widest text-stone-400">Preço</span>
@@ -746,13 +771,14 @@
         <!-- ========================================== -->
         <!-- SEÇÃO 4: AMULETOS, CRISTAIS & ALTARES      -->
         <!-- ========================================== -->
+        <!-- Conteúdo -->
         <section id="amuletos-cristais" class="scroll-mt-28">
             <div
                 class="border-t border-stone-300 pt-12 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
                     <span class="text-xs uppercase tracking-[0.3em] text-brand-accent font-medium">Coleção IV &bull;
                         Mineral & Sagrado</span>
-                    <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mt-1">Pulseiras de Cristais & Amuletos
+                    <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mt-1">Pulseiras de Cristais
                     </h2>
                     <p class="text-stone-500 text-sm font-light mt-2 max-w-xl">
                         Confeccionadas à mão com pedras e cristais autênticos em fio resistente e confortável. Um
@@ -764,7 +790,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- 1. Pulseira Alquímica Olho de Tigre Facetado -->
                 <article
@@ -773,14 +799,15 @@
                         <img src="./image/IMG_3104_Original.jpg" alt="Pulseira Olho de Tigre Facetado"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Proteção &
-                        Prosperidade</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Olho de
+                        Tigre</span>
                     <h3 class="font-serif text-2xl mb-2 text-stone-900">Pulseira Olho de Tigre</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Esferas facetadas com brilho dourado reluzente para escudo vibracional, coragem e foco.
+                        Pedras de olho de tigre com brilho dourado natural. Confortável e elegante para usar todos os
+                        dias.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 27,00</span>
                     </div>
                     <button type="button" data-product="Pulseira Olho de Tigre" data-price="R$ 27,00"
@@ -797,66 +824,18 @@
                         <img src="./image/IMG_3102_Original.jpg" alt="Pulseira 7 Chakras e Pedra Vulcânica"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Aromaterapia
-                        & Chakras</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Vulcânica & 7
+                        Chakras</span>
                     <h3 class="font-serif text-2xl mb-2 text-stone-900">Pulseira Difusora 7 Chakras</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Pedra vulcânica porosa condutora de óleos essenciais combinada com as 7 pedras naturais.
+                        Pedra vulcânica que segura o aroma de óleos essenciais, com as 7 pedras coloridas dos chakras.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 27,00</span>
                     </div>
                     <button type="button" data-product="Pulseira Difusora 7 Chakras" data-price="R$ 27,00"
                         data-image="./image/IMG_3102_Original.jpg"
-                        class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
-                        Solicitar Encomenda
-                    </button>
-                </article>
-
-                <!-- 3. Pulseira Planetária Multimineral -->
-                <article
-                    class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
-                    <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_3106_Original.jpg" alt="Pulseira Planetária Multimineral"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
-                    </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Harmonia dos
-                        Astros</span>
-                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Pulseira Multimineral Planetária</h3>
-                    <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Combinação singular de turquesa, ágatas, sodalita, jaspe e quartzo para sinergia energética.
-                    </p>
-                    <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
-                        <span class="text-xl font-serif text-stone-900">R$ 27,00</span>
-                    </div>
-                    <button type="button" data-product="Pulseira Multimineral Planetária" data-price="R$ 27,00"
-                        data-image="./image/IMG_3106_Original.jpg"
-                        class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
-                        Solicitar Encomenda
-                    </button>
-                </article>
-
-                <!-- 4. Pulseira 7 Chakras & Lava Vulcânica -->
-                <article
-                    class="group flex flex-col bg-white p-5 border border-stone-200/70 hover:shadow-lg transition-all duration-300">
-                    <div class="aspect-square bg-stone-100 overflow-hidden mb-5">
-                        <img src="./image/IMG_3100_Original.jpg" alt="Pulseira 7 Chakras & Lava Vulcânica"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
-                    </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Alinhamento
-                        dos Chakras</span>
-                    <h3 class="font-serif text-2xl mb-2 text-stone-900">Pulseira 7 Chakras & Lava Vulcânica</h3>
-                    <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Esferas dos 7 centros energéticos combinadas com pedras vulcânicas para aromaterapia diária.
-                    </p>
-                    <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
-                        <span class="text-xl font-serif text-stone-900">R$ 27,00</span>
-                    </div>
-                    <button type="button" data-product="Pulseira 7 Chakras & Lava Vulcânica" data-price="R$ 27,00"
-                        data-image="./image/IMG_3100_Original.jpg"
                         class="btn-solicitar-encomenda w-full block text-center bg-brand-dark text-white py-3.5 px-4 uppercase tracking-[0.15em] text-xs hover:bg-stone-800 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-accent">
                         Solicitar Encomenda
                     </button>
@@ -869,14 +848,14 @@
                         <img src="./image/IMG_3107_Original.jpg" alt="Pulseira Cristais da Terra Multimineral"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
                     </div>
-                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Energia dos
-                        Cristais</span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-accent font-medium mb-1">Pedras
+                        Naturais</span>
                     <h3 class="font-serif text-2xl mb-2 text-stone-900">Pulseira Cristais da Terra Multimineral</h3>
                     <p class="text-stone-500 text-sm font-light mb-6 flex-grow leading-relaxed">
-                        Sinergia mineral com ágatas, sodalita, turquesa e jaspe para harmonia corporal e mental.
+                        Combinação de ágatas, sodalita, turquesa e jaspe. Confortável no pulso e cheia de personalidade.
                     </p>
                     <div class="flex justify-between items-center mb-5 pt-3 border-t border-stone-100">
-                        <span class="text-xs uppercase tracking-widest text-stone-400">Investimento</span>
+                        <span class="text-xs uppercase tracking-widest text-stone-400">Preço</span>
                         <span class="text-xl font-serif text-stone-900">R$ 27,00</span>
                     </div>
                     <button type="button" data-product="Pulseira Cristais da Terra Multimineral" data-price="R$ 27,00"
@@ -888,7 +867,28 @@
 
             </div>
         </section>
-
+        <section class="relative w-full h-[400px] flex items-center justify-center text-center px-4 mt-16 md:mt-24">
+            <!-- Fundo e Overlay Escuro -->
+            <div class="absolute inset-0 z-0">
+                <img src="./image/banner-pulseiras.jpg" alt="Coleção de Pulseiras na Natureza"
+                    class="w-full h-full object-cover">
+                <!-- Máscara de escurecimento (60% de opacidade) idêntica ao banner anterior -->
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <!-- Conteúdo -->
+            <div class="relative z-10 max-w-3xl mx-auto text-white">
+                <span class="uppercase tracking-widest text-xs md:text-sm font-semibold text-stone-300 block mb-4">
+                    Amuletos & Cristais Naturais
+                </span>
+                <h2 class="text-3xl md:text-5xl font-serif mb-4">
+                    A força da natureza no seu dia a dia.
+                </h2>
+                <p class="text-stone-200 text-sm md:text-base leading-relaxed">
+                    Pulseiras feitas à mão com pedras autênticas. Acessórios leves e cheios de significado para te
+                    acompanhar em todos os momentos.
+                </p>
+            </div>
+        </section>
     </main>
 
     <!-- Rodapé Minimalista e Nobre -->
@@ -900,8 +900,8 @@
                 class="w-full h-full object-cover rounded-full">
         </div>
         <p class="font-serif text-2xl md:text-3xl mb-2 text-stone-900 tracking-wider">Alvorecer</p>
-        <p class="text-xs uppercase tracking-[0.3em] text-stone-400 mb-6 font-light">Geometria Sagrada & Rituais de
-            Autocuidado</p>
+        <p class="text-xs uppercase tracking-[0.3em] text-stone-400 mb-6 font-light">Arte feita à mão,
+            com calma e dedicação.</p>
 
         <div class="max-w-md mx-auto border-t border-stone-100 pt-6 space-y-2 text-xs text-stone-500 font-light">
             <p>Peças únicas feitas à mão sob encomenda.</p>
@@ -1097,7 +1097,7 @@
             return 'Olá, Alvorecer! ✨\n\n' +
                 'Gostaria de solicitar a encomenda da peça:\n' +
                 '• Obra: ' + produtoAtual.nome + '\n' +
-                '• Investimento: ' + produtoAtual.preco + '\n' +
+                '• Valor: ' + produtoAtual.preco + '\n' +
                 '• Meu CEP para envio: ' + cepTexto + '\n\n' +
                 'Como podemos prosseguir com o pedido?';
         }
